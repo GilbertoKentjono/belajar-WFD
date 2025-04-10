@@ -3,7 +3,9 @@
 @section('content')
     <h2 class="text-xl font-bold mb-4">Tiket untuk {{ $flight->flight_code }}</h2>
 
-    <a href="{{ url('/') }}" class="inline-block mb-4 text-blue-600 hover:underline">&larr; Kembali ke Daftar Penerbangan</a>
+    <button onclick="window.location='{{ url('/') }}'" class="inline-block mb-4 text-blue-600 hover:text-blue-700 bg-transparent border border-blue-600 py-2 px-4 rounded focus:outline-none">
+    &larr; Kembali ke Daftar Penerbangan
+</button>
 
     <table class="w-full table-auto border-collapse">
         <thead>

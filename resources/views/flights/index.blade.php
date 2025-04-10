@@ -12,8 +12,15 @@
                         <p><strong>Jam:</strong> {{ $flight->departure_time }} - {{ $flight->arrival_time }}</p>
                     </div>
                     <div class="space-x-2">
-                        <a href="{{ url('/flights/book/'.$flight->id) }}" class="text-blue-600 hover:underline">Pesan Tiket</a>
-                        <a href="{{ url('/flights/ticket/'.$flight->id) }}" class="text-green-600 hover:underline">Lihat Tiket</a>
+                    <button onclick="window.location='{{ url('/flights/book/'.$flight->id) }}'" class="text-blue-600 hover:text-blue-700 bg-transparent border border-blue-600 py-2 px-4 rounded focus:outline-none">
+                        Pesan Tiket
+                    </button>
+                    <button onclick="window.location='{{ url('/flights/ticket/'.$flight->id) }}'" class="text-green-600 hover:text-green-700 bg-transparent border border-green-600 py-2 px-4 rounded focus:outline-none">
+                        Lihat Tiket
+                    </button>
+                    <button onclick="window.location='{{ url('/flights/edit/'.$flight->id) }}'" class="text-yellow-600 hover:text-yellow-700 bg-transparent border border-yellow-600 py-2 px-4 rounded focus:outline-none">
+                        Edit
+                    </button>
                     </div>
                 </div>
             </li>
